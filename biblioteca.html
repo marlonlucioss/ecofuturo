@@ -41,6 +41,7 @@
 </div>
 
 <div class="row">
+    <!-- Mudar a classe de acordo com a pagina -->
     <section class="title-content biblioteca col-lg-12">
         <h2 class="title-text">biblioteca virtual</h2>
     </section>
@@ -185,10 +186,18 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/masonry.js"></script>
 
 <!-- Script apenas para a pagina biblioteca -->
-<script src="js/masonry.js"></script>
-<script src="js/eco.js"></script>
+<script>
+    (function(){
+        $(document).ready(function(){
+            $('.biblioteca-content').masonry({
+                itemSelector: '.biblioteca-box'
+            });
+        });
+    }());
+</script>
 <!-- Script apenas para a pagina biblioteca -->
 
 
